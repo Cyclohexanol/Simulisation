@@ -29,4 +29,5 @@ public class NoiseArrayGenerator
 		if (value > max) return max;
 		return value;
 	}
+	
 }

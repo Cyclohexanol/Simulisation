@@ -10,6 +10,7 @@ public abstract class Tile
 	public static final Color COLOR_LAKE = new Color(110, 140, 255);
 	public static final Color COLOR_ROCK = new Color(200, 200, 200);
 	public static final Color COLOR_DIRT = new Color(200, 135, 80);
+	public static final Color COLOR_SAND = new Color(230, 230, 100);
 	
 	private final Type type;
 	private final Material material;
@@ -53,7 +54,7 @@ public abstract class Tile
 	
 	public enum Material
 	{
-		DIRT,ROCK,LAKE,OCEAN,GRASS,FOREST
+		DIRT,ROCK,LAKE,OCEAN,GRASS,FOREST,SAND
 	}
 	
 }

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 import entity.WorldMap;
+import utility.geom.Point;
 
 public class PathFinder 
 {
@@ -33,7 +34,7 @@ public class PathFinder
 				nodes[x][y] = new Node(x,y);
 	}
 	
-	public Path findPath(Point start, Point end)
+	public Path findPath(Node start, Node end)
 	{
 		if(start==null||end==null)
 			return null;

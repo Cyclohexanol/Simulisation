@@ -28,7 +28,7 @@ public class TileGeneratorTest
 		System.out.println("Generating tiles...");
 		long start = System.currentTimeMillis();
 		
-		Tile[][] tiles = TileGenerator.generateTile(size, seed);
+		Tile[][] tiles = SquareTileGenerator.generateTile(size, seed);
 
 		System.out.println((size*size)+" tiles generated in " + (System.currentTimeMillis()-start)/1000d+"s.");
 		System.out.println("Generating picture...");

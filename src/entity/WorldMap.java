@@ -44,20 +44,6 @@ public class WorldMap {
 		return true;
 	}
 	
-	// needs to be added
-	/*public static class Builder {
-		
-		private Tile [][] tiles;
-		
-		public Builder()
-		{
-			this.tiles = new Tile[0][0];
-		}
-		
-		public WorldMap build()
-		{
-			return new WorldMap(tiles);
-		}
-		
-	}*/
+	
+	
 }

@@ -1,5 +1,7 @@
 package utility.pathfinder;
 
+import utility.geom.Point;
+
 public class Node implements Comparable<Object> {
 	private int x;
 	private int y;

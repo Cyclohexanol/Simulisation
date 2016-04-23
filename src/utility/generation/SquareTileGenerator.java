@@ -2,26 +2,26 @@ package utility.generation;
 
 import entity.tile.*;
 
-public class TileGenerator {
+public class SquareTileGenerator {
 	
 	public static Tile[][] generateTile(int size, int seed)
 	{
 		// layer frequency, higher equals more features
 		float terLayerF = 0.0006f;
 		float waterLayerF = 0.00008f;
-		float lakeLayerF = 0.0003f;
+		float dirtLayerF = 0.0003f;
 		// weight, higher = smoother
 		float terWeight = 1f;
 		float waterWeight = 1.1f;
-		float lakeWeight = 1.2f;
+		float dirtWeight = 1.2f;
 		// number of noise loop
 		int terLoops = 3;
 		int waterLoops = 2;
-		int lakeLoops = 2;
+		int dirtLoops = 2;
 		
 		float[][] ter = NoiseArrayGenerator.generateNoise(size, size, seed, terLayerF, terWeight, terLoops);
 		float[][] water = NoiseArrayGenerator.generateNoise(size, size, seed, waterLayerF, waterWeight, waterLoops);
-		float[][] lake = NoiseArrayGenerator.generateNoise(size, size, seed%11, lakeLayerF, lakeWeight, lakeLoops);
+		float[][] dirt = NoiseArrayGenerator.generateNoise(size, size, seed%11, dirtLayerF, dirtWeight, dirtLoops);
 		
 		Tile[][] tiles = new Tile[size][size];
 		
@@ -41,7 +41,7 @@ public class TileGenerator {
 					tempTile = new Rock();
 				else if(ter[i][j]<0.2)
 					tempTile = new Forest();
-				else if(lake[i][j]>-0.95)
+				else if(dirt[i][j]>-0.95)
 					tempTile = new Grass();
 				else
 					tempTile = new Dirt();

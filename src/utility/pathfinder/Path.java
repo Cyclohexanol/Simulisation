@@ -3,6 +3,8 @@ package utility.pathfinder;
 import java.util.ArrayList;
 import java.util.List;
 
+import utility.geom.Point;
+
 public class Path {
 
 	private int currentStep = 0;

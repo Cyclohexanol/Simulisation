@@ -1,10 +1,12 @@
 package utility.geom;
 
+import java.util.List;
+
 public class Polygon 
 {
-	private final Point[] vertices;
+	private final List<Point> vertices;
 
-	public Polygon(Point[] vertices) {
+	public Polygon(List<Point> vertices) {
 		super();
 		this.vertices = vertices;
 	}
@@ -14,31 +16,31 @@ public class Polygon
 		return (float) (Math.abs(signedDoubleArea()) * 0.5);
 	}
 	
-	public String winding()
+	public Winding winding()
 	{
-		float signedDoubleArea = signedDoubleArea();
+		double signedDoubleArea = signedDoubleArea();
 		if (signedDoubleArea < 0)
 		{
-			return "clockwise";
+			return Winding.CLOCKWISE;
 		}
 		if (signedDoubleArea > 0)
 		{
-			return "counterclockwise";
+			return Winding.COUNTERCLOCKWISE;
 		}
-		return "none";
+		return Winding.NONE;
 	}
 	
 	private float signedDoubleArea()
 	{
 		int index, nextIndex;
-		int n = vertices.length;
+		int n = vertices.size();
 		Point current, next;
 		float signedDoubleArea = 0;
 		for (index = 0; index < n; ++index)
 		{
 			nextIndex = (index + 1) % n;
-			current = vertices[index];
-			next = vertices[nextIndex];
+			current = vertices.get(index);
+			next = vertices.get(nextIndex);
 			signedDoubleArea += current.getX() * next.getY() - next.getX() * current.getY();
 		}
 		return signedDoubleArea;

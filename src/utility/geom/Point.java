@@ -47,7 +47,27 @@ public class Point
 		return "["+x+","+y+"]";
 	}
 
+	public static Point interpolate(Point p1, Point p2, double f)
+	{
+		double dx = p2.x - p1.x;
+		double dy = p2.y - p1.y;
+		
+		return new Point(p1.x + (dx/f), p1.y + (dy/f));
+	}
 
+	public Point subtract(Point p1)
+	{
+		double x = this.x - p1.x;
+		double y = this.y - p1.y;
+		
+		return new Point(x,y);
+	}
+	
+	public double length()
+	{
+		return Math.abs(Math.sqrt(x*x + y*y));
+	}
+	
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)

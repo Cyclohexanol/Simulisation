@@ -21,4 +21,14 @@ public class LineSegment {
 			return -1;
 		return 0;
 	}
+
+	public Point getP0() {
+		return p0;
+	}
+
+	public Point getP1() {
+		return p1;
+	}
+	
+	
 }

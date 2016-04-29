@@ -6,15 +6,15 @@ public class Circle
 	private final Point center;
 	private final double radius;
 	
-	public Circle(Point center, int radius)
+	public Circle(Point center, double radius)
 	{
 		this.center = center;
 		this.radius = radius;
 	}
 	
-	public Circle(int centerX, int centerY, int radius)
+	public Circle(double x, double y, double radius)
 	{
-		this(new Point(centerX,centerY), radius);
+		this(new Point(x,y), radius);
 	}
 
 	public Point getCenter() {

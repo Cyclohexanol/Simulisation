@@ -6,6 +6,7 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class NoiseArrayGeneratorTest 
@@ -13,7 +14,7 @@ public class NoiseArrayGeneratorTest
 	private final int SIZE = 6000;
 	private final int SEED = 0;
 	
-	@Test
+	@Ignore
 	public void humidityTest() {
 		// image size
 		int size = SIZE;

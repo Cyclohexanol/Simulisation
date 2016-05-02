@@ -5,7 +5,11 @@ import java.awt.Color;
 public class Forest extends Land{
 
 	public Forest() {
-		super(Material.FOREST, true, false, COLOR_FOREST);
+		this(Tile.COLOR_FOREST);
+	}
+	
+	public Forest(Color color) {
+		super(Material.FOREST, true, false,color);
 	}
 
 }

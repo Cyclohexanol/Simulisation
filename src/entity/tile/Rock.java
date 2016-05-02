@@ -1,9 +1,17 @@
 package entity.tile;
 
+import java.awt.Color;
+
 public class Rock extends Land {
 
-	public Rock() {
-		super(Material.ROCK, true, false, COLOR_ROCK);
+	public Rock() 
+	{
+		this(Tile.COLOR_SCORCHED);
+	}
+	
+	public Rock(Color color)
+	{
+		super(Material.ROCK, true, false,color);
 	}
 
 }

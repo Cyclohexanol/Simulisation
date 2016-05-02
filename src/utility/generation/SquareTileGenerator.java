@@ -32,11 +32,11 @@ public class SquareTileGenerator {
 				if(water[i][j]>0.4)
 					tempTile = new Ocean();
 				else if(water[i][j]>0.395)
-					tempTile = new Sand();
+					tempTile = new Beach();
 				else if(water[i][j]<-0.7)
 					tempTile = new Lake();
 				else if(water[i][j]<-0.699)
-					tempTile = new Sand();
+					tempTile = new Beach();
 				else if(ter[i][j]>0.95)
 					tempTile = new Rock();
 				else if(ter[i][j]<0.2)
@@ -44,7 +44,7 @@ public class SquareTileGenerator {
 				else if(dirt[i][j]>-0.95)
 					tempTile = new Grass();
 				else
-					tempTile = new Dirt();
+					tempTile = new Desert();
 				
 				tiles[i][j] = bindTiles(tempTile,tiles,i,j);
 			}

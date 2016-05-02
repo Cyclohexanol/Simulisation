@@ -211,9 +211,9 @@ public class Map {
 	}
 
 	private void redistributeMoisture(List<Corner> locations) {
-		Collections.sort(locations, new Comparator<Center>() {
+		Collections.sort(locations, new Comparator<Corner>() {
 			@Override
-			public int compare(Center o1, Center o2) {
+			public int compare(Corner o1, Corner o2) {
 				if (o1.getMoisture() < o2.getMoisture())
 					return -1;
 				if (o1.getMoisture() > o2.getMoisture())
@@ -373,9 +373,9 @@ public class Map {
 		double SCALE_FACTOR = 1.1;
 		double y, x;
 
-		Collections.sort(locations, new Comparator<Center>() {
+		Collections.sort(locations, new Comparator<Corner>() {
 			@Override
-			public int compare(Center o1, Center o2) {
+			public int compare(Corner o1, Corner o2) {
 				if (o1.getElevation() < o2.getElevation())
 					return -1;
 				if (o1.getElevation() > o2.getElevation())
